@@ -1,0 +1,56 @@
+using System;
+usingSystem.Linq;
+
+namespace ConsoleApp1
+{
+internalstaticclassProgram
+    {
+privatestaticvoid Main()
+        {
+int[][] jagged = new[]
+            {
+new[] { 1, 2, 3 },
+new[] { 4, 5 },
+new[] { 6 },
+newint[0]
+            };
+int[] rowSums = SumRowSums(jagged);
+
+for (int i = 0; i <rowSums.Length; i++)
+            {
+Console.WriteLine($"Row {i} sum = {rowSums[i]}");
+            }
+int total = rowSums.Sum();
+Console.WriteLine($"Total sum = {total}");
+        }
+
+privatestaticint[] SumRowSums(int[][] jagged)
+        {
+if (jagged == null) thrownewArgumentNullException(nameof(jagged));
+int[] sums = newint[jagged.Length];
+for (int i = 0; i <jagged.Length; i++)
+            {
+int sum = 0;
+int[] row = jagged[i];
+
+if (row != null)
+                {
+for (int j = 0; j <row.Length; j++)
+                    {
+sum += row[j];
+                 }
+                }
+
+sums[i] = sum;
+            }
+
+return sums;
+        }
+    }
+}
+Output:
+Row 0 sum = 6
+Row 1 sum = 9
+Row 2 sum = 6
+Row 3 sum = 0
+Total sum = 21
