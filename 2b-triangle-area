@@ -1,0 +1,18 @@
+using System;
+class Program
+{
+    static void Area(in double b, in double h, out double area)
+    {
+        area = 0.5 * b * h;
+    }
+    static void Main()
+    {
+        double b = 10, h = 5, area;
+
+        Area(in b, in h, out area);
+
+        Console.WriteLine("Area of Triangle = " + area);
+    }
+}
+Output
+Area of Triangle = 25
