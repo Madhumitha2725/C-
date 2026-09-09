@@ -1,0 +1,31 @@
+using System;
+class STUDENT
+{
+    int roll;
+    string name;
+    int m1, m2, m3;
+    STUDENT(int r, string n, int a, int b, int c)
+    {
+        roll = r;
+        name = n;
+        m1 = a;
+        m2 = b;
+        m3 = c;
+    }
+    double Average()
+    {
+        return (m1 + m2 + m3) / 3.0;
+    }
+
+    static void Main()
+    {
+        STUDENT s = new STUDENT(101, "Muthu", 80, 90, 70);
+        Console.WriteLine("Roll No = " + s.roll);
+        Console.WriteLine("Name = " + s.name);
+        Console.WriteLine("Average = " + s.Average());
+    }
+}
+Output
+Roll No = 101
+Name = CSE
+Average = 80
