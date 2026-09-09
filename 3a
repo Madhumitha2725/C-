@@ -1,0 +1,27 @@
+using System;
+class Circle
+{
+    double radius;
+    Circle(double r)
+    {
+        radius = r;
+    }
+    double Area()
+    {
+        return 3.14 * radius * radius;
+    }
+    double Perimeter()
+    {
+        return 2 * 3.14 * radius;
+    }
+    static void Main()
+    {
+        Circle c = new Circle(5);
+
+        Console.WriteLine("Area = " + c.Area());
+        Console.WriteLine("Perimeter = " + c.Perimeter());
+    }
+}
+Output
+Area = 78.5
+Perimeter = 31.4
